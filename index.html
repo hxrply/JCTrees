@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>JC Trees · Handmade pallet-wood Christmas trees</title>
-<meta name="description" content="Handmade wooden Christmas trees upcycled from old pallets. 32 inches tall, £20 each. Transforming old to new.">
+<meta name="description" content="Handmade wooden Christmas trees upcycled from old pallets, 82.5cm tall, £20 each. Plus birch log tealight holders. Transforming old to new.">
 <meta name="theme-color" content="#1f5a2a">
 <meta property="og:title" content="JC Trees">
 <meta property="og:description" content="Handmade wooden Christmas trees upcycled from old pallets. £20 each.">
@@ -108,17 +108,18 @@ ul.facts { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
 ul.facts li { font-weight: 800; color: var(--pine-dark); display: flex; gap: 10px; align-items: baseline; font-size: 1.05rem; }
 ul.facts li::before { content: "★"; color: var(--gold); }
 
-/* Prices: one card per tree. To add a photo, save it as img/tree-1.jpg (tree-2, tree-3) and it replaces the placeholder automatically. */
+/* Prices: one card per product. Photos live in img/. */
 .prices-title { display: flex; align-items: center; justify-content: center; gap: 12px; }
 .prices-title::before, .prices-title::after { content: "\2605"; color: var(--gold); font-size: 1.2rem; }
 .prices-sub { margin-top: -4px; }
-.prices { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 14px; margin-top: 18px; }
+.prices { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 14px; margin-top: 18px; }
 .card { background: #fff8e8; border: 2px solid var(--pine); border-radius: 14px; overflow: hidden; box-shadow: 0 3px 0 var(--pine-dark); }
 .photo { position: relative; aspect-ratio: 4 / 5; background: repeating-linear-gradient(135deg, #f3e6c4 0 14px, #efdfb6 14px 28px); display: grid; place-items: center; color: var(--pine-dark); font-weight: 800; }
 .photo span { font-family: var(--f-banner); font-size: 1.1rem; opacity: .8; }
 .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 .card .label { padding: 12px 10px 14px; }
 .card h3 { margin: 0; font-family: var(--f-banner); font-weight: 400; color: var(--pine); font-size: 1.3rem; }
+.card .size { display: block; font-size: .9rem; font-weight: 800; color: var(--pine-dark); margin-top: 2px; }
 .card .cost { display: block; font-weight: 900; color: var(--berry); font-size: 1.8rem; line-height: 1.1; }
 
 section.block { margin-top: 36px; text-align: center; }
@@ -191,7 +192,7 @@ footer small { display: block; font-family: var(--f-body); color: #6a6758; font-
       <div class="product">
         <div class="treebox">
           <div class="price"><b>£20</b><i>each</i></div>
-          <svg class="tree" viewBox="0 0 250 368" role="img" aria-label="Pallet-wood Christmas tree, 32 inches tall with six slats and 16 inch feet">
+          <svg class="tree" viewBox="0 0 250 368" role="img" aria-label="Pallet-wood Christmas tree, 82.5cm tall and 41cm wide">
             <defs>
               <pattern id="grain" width="60" height="8" patternUnits="userSpaceOnUse">
                 <path d="M0 2 Q15 0 30 2 T60 2 M0 6 Q20 4 40 6 T60 6" stroke="#7a5532" stroke-opacity=".35" stroke-width=".8" fill="none"/>
@@ -213,17 +214,17 @@ footer small { display: block; font-family: var(--f-body); color: #6a6758; font-
               <path d="M35 340 l9 -4 v8 z M185 340 l-9 -4 v8 z" stroke="none"/>
             </g>
             <rect x="207" y="150" width="30" height="40" fill="#fbf3df"/>
-            <text x="222" y="170" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 222 170)" font-family="Nunito, sans-serif" font-weight="900" font-size="17" fill="#153f1d">32"</text>
-            <text x="110" y="364" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="900" font-size="17" fill="#153f1d">16"</text>
+            <text x="222" y="170" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 222 170)" font-family="Nunito, sans-serif" font-weight="900" font-size="17" fill="#153f1d">82.5cm</text>
+            <text x="110" y="364" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="900" font-size="17" fill="#153f1d">41cm</text>
           </svg>
         </div>
         <div class="copy">
           <h2>Handmade wooden Christmas trees</h2>
           <p>Every JC Trees tree is built by hand from old pallets that would otherwise be thrown away, so no two are quite the same. Dress it with lights and baubles, or leave it rustic.</p>
           <ul class="facts">
-            <li>32 inches tall</li>
+            <li>82.5cm tall</li>
             <li>Six wooden slat branches</li>
-            <li>Stands steady on 16 inch feet</li>
+            <li>41cm wide, on steady cross feet</li>
             <li>Upcycled from reclaimed pallets</li>
             <li>£20 each</li>
           </ul>
@@ -231,20 +232,16 @@ footer small { display: block; font-family: var(--f-body); color: #6a6758; font-
       </div>
 
       <section class="block" id="prices">
-        <h2 class="prices-title">Our Trees &amp; Prices</h2>
-        <p class="prices-sub">Every tree is one of a kind. Pick your favourite!</p>
+        <h2 class="prices-title">What We Sell</h2>
+        <p class="prices-sub">Everything is handmade, so no two are quite the same.</p>
         <div class="prices">
           <div class="card">
-            <div class="photo"><span>Photo coming soon</span><img src="img/tree-1.jpg" alt="JC Trees pallet Christmas tree 1" loading="lazy" onerror="this.remove()"></div>
-            <div class="label"><h3>Tree 1</h3><span class="cost">£20</span></div>
+            <div class="photo"><img src="img/trees.jpg" alt="Two JC Trees pallet-wood Christmas trees standing on cross-shaped feet" loading="lazy"></div>
+            <div class="label"><h3>Pallet tree</h3><span class="size">82.5cm tall, 41cm wide</span><span class="cost">£20</span></div>
           </div>
           <div class="card">
-            <div class="photo"><span>Photo coming soon</span><img src="img/tree-2.jpg" alt="JC Trees pallet Christmas tree 2" loading="lazy" onerror="this.remove()"></div>
-            <div class="label"><h3>Tree 2</h3><span class="cost">£20</span></div>
-          </div>
-          <div class="card">
-            <div class="photo"><span>Photo coming soon</span><img src="img/tree-3.jpg" alt="JC Trees pallet Christmas tree 3" loading="lazy" onerror="this.remove()"></div>
-            <div class="label"><h3>Tree 3</h3><span class="cost">£20</span></div>
+            <div class="photo"><img src="img/tealights.jpg" alt="A group of birch log tealight holders in different sizes" loading="lazy"></div>
+            <div class="label"><h3>Tealight holder</h3><span class="size">Various sizes, 4cm to 10cm</span><span class="cost">Ask us</span></div>
           </div>
         </div>
       </section>
