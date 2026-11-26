@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>JC Trees · Handmade pallet-wood Christmas trees</title>
+<title>JC Trees · Handmade pallet Christmas trees</title>
 <meta name="description" content="Handmade wooden Christmas trees upcycled from old pallets, 82.5cm tall, £20 each. Plus birch log tealight holders. Transforming old to new.">
-<meta name="theme-color" content="#1f5a2a">
+<meta name="theme-color" content="#f6eedb">
 <meta property="og:title" content="JC Trees">
 <meta property="og:description" content="Handmade wooden Christmas trees upcycled from old pallets. £20 each.">
 <meta property="og:image" content="https://hxrply.github.io/jc-trees/img/share.png">
@@ -15,319 +15,228 @@
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Courgette&family=Nunito:wght@600;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Karla:wght@400;600;700&display=swap">
 <style>
 :root {
-  --paper: #fbf3df;
-  --paper-edge: #f1e3c0;
-  --pine: #1f5a2a;
-  --pine-dark: #153f1d;
-  --berry: #c8202a;
-  --berry-dark: #9c1820;
-  --gold: #d9a52b;
-  --ink: #2b2a22;
-  --f-script: "Kaushan Script", "Brush Script MT", cursive;
-  --f-banner: "Courgette", "Kaushan Script", cursive;
-  --f-body: "Nunito", "Trebuchet MS", system-ui, sans-serif;
+  --paper: #f6eedb;
+  --paper-dark: #ecdfc0;
+  --green: #22592c;
+  --green-dark: #173f1f;
+  --red: #b8242a;
+  --gold: #c8962a;
+  --ink: #2d2a22;
+  --muted: #6b6452;
+  --brush: "Caveat Brush", "Marker Felt", cursive;
+  --body: "Karla", "Helvetica Neue", Arial, sans-serif;
   color-scheme: light;
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
-  background: var(--paper);
   color: var(--ink);
-  font-family: var(--f-body);
-  font-weight: 600;
-  line-height: 1.5;
+  font-family: var(--body);
+  font-size: 1.08rem;
+  line-height: 1.6;
+  background-color: var(--paper);
+  /* faint paper grain */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .35 0 0 0 0 .2 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
-a { color: var(--berry); }
+a { color: var(--red); text-underline-offset: 3px; }
+a:hover { color: var(--green-dark); }
+img { max-width: 100%; display: block; }
+
 .page {
-  max-width: 760px;
+  max-width: 720px;
   margin: 0 auto;
-  padding: 16px;
+  padding: 0 16px;
 }
-.frame {
-  position: relative;
-  border: 4px solid var(--pine);
-  padding: 10px;
-  margin-top: 8px;
+/* a simple hand-ruled double border down the sides, like the poster */
+.edge {
+  border-left: 3px solid var(--green);
+  border-right: 3px solid var(--green);
+  box-shadow: inset 6px 0 0 -4px var(--red), inset -6px 0 0 -4px var(--red);
+  min-height: 100vh;
+  padding: 0 26px 40px;
 }
-.frame-inner {
-  border: 2px solid var(--berry);
-  padding: 28px 20px 36px;
-  position: relative;
-}
-.corner { position: absolute; width: 92px; height: 92px; pointer-events: none; }
-.corner.tl { top: -10px; left: -10px; }
-.corner.tr { top: -10px; right: -10px; transform: scaleX(-1); }
-.corner.bl { bottom: -10px; left: -10px; transform: scaleY(-1); }
-.corner.br { bottom: -10px; right: -10px; transform: scale(-1,-1); }
 
-header { text-align: center; }
-.logo { width: 180px; height: 180px; display: block; margin: 0 auto; }
+/* ---------- header ---------- */
+header { text-align: center; padding: 44px 8px 8px; position: relative; }
 h1 {
-  font-family: var(--f-script); font-weight: 400; color: var(--pine);
-  font-size: clamp(3.2rem, 12vw, 5rem); line-height: 1; margin: 12px 0 0;
-  text-shadow: 2px 2px 0 rgba(21,63,29,.15);
+  font-family: var(--brush); font-weight: 400; color: var(--green);
+  font-size: clamp(4.2rem, 19vw, 7rem); line-height: .9; margin: 0;
+  letter-spacing: .01em;
 }
-.tagline { font-family: var(--f-script); color: var(--pine-dark); font-size: clamp(1.4rem, 5vw, 2rem); margin: 4px 0 0; }
-.swash { width: 220px; max-width: 60%; height: 12px; display: block; margin: 6px auto 0; }
+.underline { display: block; width: min(320px, 70%); height: 16px; margin: 4px auto 0; }
+.banner {
+  display: inline-block; margin: 22px auto 0; padding: 8px 34px 10px;
+  background: var(--red); color: #fff7ea;
+  font-family: var(--brush); font-size: clamp(1.6rem, 7vw, 2.2rem); line-height: 1.1;
+  transform: rotate(-1.5deg);
+  clip-path: polygon(0 0, 100% 0, 96% 50%, 100% 100%, 0 100%, 4% 50%);
+}
+.motto {
+  font-family: var(--brush); color: var(--green); font-weight: 400;
+  font-size: clamp(2.3rem, 10vw, 3.4rem); line-height: 1; margin: 22px 0 0;
+}
+.star { position: absolute; font-size: 1.1rem; line-height: 1; }
+.s1 { color: var(--red); top: 26px; left: 14%; transform: rotate(-12deg); }
+.s2 { color: var(--gold); top: 58px; right: 12%; font-size: 1.4rem; transform: rotate(8deg); }
+.s3 { color: var(--gold); bottom: 70px; left: 8%; }
+.s4 { color: var(--red); bottom: 24px; right: 16%; font-size: .9rem; }
+.sprig { width: 92px; height: 70px; position: absolute; top: 6px; }
+.sprig.l { left: 2px; }
+.sprig.r { right: 2px; transform: scaleX(-1); }
 
-.ribbon { position: relative; margin: 28px auto 0; max-width: 440px; aspect-ratio: 7 / 1; }
-.ribbon svg { width: 100%; height: 100%; display: block; }
-.ribbon span {
-  position: absolute; inset: 0 0 10%; display: grid; place-items: center;
-  font-family: var(--f-banner); color: #fff; font-size: clamp(1.1rem, 4.6vw, 1.7rem);
-  text-shadow: 1px 1px 0 rgba(90,0,0,.35);
+/* ---------- taped photos ---------- */
+.snap {
+  background: #fffdf7; padding: 10px 10px 12px;
+  box-shadow: 0 1px 2px rgba(60,40,10,.18), 0 8px 18px rgba(60,40,10,.10);
+  position: relative;
 }
+.snap::before {
+  content: ""; position: absolute; top: -12px; left: 50%; width: 90px; height: 24px;
+  background: rgba(236,223,192,.85); transform: translateX(-50%) rotate(-3deg);
+  box-shadow: 0 1px 1px rgba(0,0,0,.06);
+}
+.snap img { width: 100%; height: auto; }
+.item .snap img { aspect-ratio: 4 / 5; object-fit: cover; height: auto; }
+.snap figcaption { font-family: var(--brush); color: var(--green-dark); font-size: 1.35rem; text-align: center; margin-top: 6px; line-height: 1.2; }
 
-.product {
-  display: grid; grid-template-columns: 1fr; gap: 20px; align-items: center;
-  margin-top: 24px;
-}
-@media (min-width: 620px) { .product { grid-template-columns: 240px 1fr; gap: 32px; } }
-.treebox { position: relative; max-width: 240px; margin: 0 auto; width: 100%; }
-.tree { width: 100%; height: auto; display: block; }
-.price {
-  position: absolute; top: -6px; left: -10px;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  width: 92px; height: 92px; border-radius: 50%;
-  background: var(--berry); color: #fff; transform: rotate(-8deg);
-  box-shadow: 0 0 0 4px var(--paper), 0 0 0 6px var(--gold);
-}
-.price b { font-weight: 900; font-size: 2.3rem; line-height: .95; }
-.price i { font-style: normal; font-family: var(--f-banner); font-size: 1rem; }
+.hero { max-width: 440px; margin: 34px auto 0; transform: rotate(1.2deg); }
 
+/* ---------- sections ---------- */
+section { margin-top: 52px; }
 h2 {
-  font-family: var(--f-script); font-weight: 400; color: var(--pine);
-  font-size: clamp(1.7rem, 6vw, 2.2rem); line-height: 1.1; margin: 0 0 10px;
+  font-family: var(--brush); font-weight: 400; color: var(--green);
+  font-size: clamp(2.2rem, 8vw, 2.8rem); line-height: 1; margin: 0 0 14px; text-align: center;
 }
-.copy p { margin: 0 0 12px; font-size: 1.05rem; }
-ul.facts { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
-ul.facts li { font-weight: 800; color: var(--pine-dark); display: flex; gap: 10px; align-items: baseline; font-size: 1.05rem; }
-ul.facts li::before { content: "★"; color: var(--gold); }
+.intro { max-width: 34em; margin: 30px auto 0; text-align: center; }
+.intro p { margin: 0 0 12px; }
 
-/* Prices: one card per product. Photos live in img/. */
-.prices-title { display: flex; align-items: center; justify-content: center; gap: 12px; }
-.prices-title::before, .prices-title::after { content: "\2605"; color: var(--gold); font-size: 1.2rem; }
-.prices-sub { margin-top: -4px; }
-.prices { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 14px; margin-top: 18px; }
-.card { background: #fff8e8; border: 2px solid var(--pine); border-radius: 14px; overflow: hidden; box-shadow: 0 3px 0 var(--pine-dark); }
-.photo { position: relative; aspect-ratio: 4 / 5; background: repeating-linear-gradient(135deg, #f3e6c4 0 14px, #efdfb6 14px 28px); display: grid; place-items: center; color: var(--pine-dark); font-weight: 800; }
-.photo span { font-family: var(--f-banner); font-size: 1.1rem; opacity: .8; }
-.photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
-.card .label { padding: 12px 10px 14px; }
-.card h3 { margin: 0; font-family: var(--f-banner); font-weight: 400; color: var(--pine); font-size: 1.3rem; }
-.card .size { display: block; font-size: .9rem; font-weight: 800; color: var(--pine-dark); margin-top: 2px; }
-.card .cost { display: block; font-weight: 900; color: var(--berry); font-size: 1.8rem; line-height: 1.1; }
+.items { display: grid; gap: 40px; margin-top: 26px; }
+@media (min-width: 640px) { .items { grid-template-columns: 1fr 1fr; gap: 32px; } }
+.item:nth-child(1) .snap { transform: rotate(-1.4deg); }
+.item:nth-child(2) .snap { transform: rotate(1.1deg); }
+.item h3 { font-family: var(--brush); font-weight: 400; color: var(--green-dark); font-size: 1.9rem; margin: 18px 0 2px; line-height: 1.1; }
+.item p { margin: 0; }
+.item .price { font-family: var(--brush); color: var(--red); font-size: 2.3rem; line-height: 1.1; margin-top: 6px; }
+.item ul { margin: 6px 0 0; padding-left: 1.1em; }
+.item li { margin: 2px 0; }
 
-section.block { margin-top: 36px; text-align: center; }
-section.block p { margin: 0 auto 12px; max-width: 34em; font-size: 1.05rem; }
+.market { text-align: center; }
+.when { font-weight: 700; font-size: 1.25rem; color: var(--red); margin: 0; }
+.time { font-weight: 700; color: var(--green-dark); margin: 0; }
+.venue { color: var(--muted); margin: 6px 0 0; }
 
-.market {
-  background: #fff8e8;
-  border: 2px dashed var(--gold);
-  border-radius: 14px;
-  padding: 20px 16px;
+.order { max-width: 30em; margin: 0 auto; }
+.order p { margin: 0 0 10px; }
+.links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 18px; }
+.links a {
+  display: inline-block; padding: 10px 18px; border: 2px solid var(--green); border-radius: 6px;
+  color: var(--green-dark); text-decoration: none; font-weight: 700; background: #fffaf0;
 }
-.when { font-weight: 900; color: var(--berry); font-size: clamp(1.3rem, 5vw, 1.7rem); line-height: 1.2; }
-.when small { display: block; color: var(--pine-dark); font-size: 1.1rem; font-weight: 800; margin-top: 2px; }
-.venue { margin-top: 8px; font-weight: 800; color: var(--pine-dark); }
-
-.btn {
-  display: inline-flex; align-items: center; gap: 10px;
-  background: var(--pine); color: #fff; text-decoration: none;
-  font-weight: 900; font-size: 1.1rem;
-  padding: 14px 20px; border-radius: 999px; white-space: nowrap; margin-top: 4px;
-  box-shadow: 0 3px 0 var(--pine-dark);
-}
-.btn:hover, .btn:focus-visible { background: var(--pine-dark); }
-.btn svg { width: 24px; height: 24px; flex: none; }
-.btn.alt { background: var(--berry); margin-top: 18px; }
-.btn.alt:hover, .btn.alt:focus-visible { background: #a3161f; }
-.handle { display: block; overflow-wrap: anywhere; margin-top: 10px; font-weight: 800; color: var(--pine-dark); }
-
-.steps { list-style: none; padding: 0; margin: 12px auto 0; display: grid; gap: 10px; max-width: 30em; text-align: left; counter-reset: s; }
-.steps li { counter-increment: s; display: flex; gap: 12px; align-items: flex-start; font-size: 1.05rem; }
-.steps li::before {
-  content: counter(s); flex: none; width: 30px; height: 30px; border-radius: 50%;
-  background: var(--berry); color: #fff; font-weight: 900; display: grid; place-items: center; font-size: .95rem;
-}
+.links a:hover { background: var(--green); color: #fff; }
+.small { color: var(--muted); font-size: .95rem; text-align: center; margin-top: 10px; overflow-wrap: anywhere; }
 
 footer {
-  text-align: center; margin-top: 40px;
-  font-family: var(--f-banner); color: var(--berry); font-size: 1.15rem;
+  margin-top: 60px; padding-top: 18px; text-align: center;
+  border-top: 2px dashed var(--paper-dark);
 }
-footer small { display: block; font-family: var(--f-body); color: #6a6758; font-size: .85rem; margin-top: 6px; font-weight: 600; }
+footer .thanks { font-family: var(--brush); color: var(--red); font-size: 1.7rem; margin: 0; line-height: 1.2; }
+footer .by { color: var(--muted); font-size: .92rem; margin: 4px 0 0; }
+
+@media (max-width: 420px) {
+  .page { padding: 0 10px; }
+  .edge { padding: 0 18px 32px; }
+  .sprig { width: 64px; height: 50px; }
+}
 </style>
 </head>
 <body>
 <div class="page">
-  <div class="frame">
-    <div class="frame-inner">
-      <svg class="corner tl" viewBox="0 0 92 92" aria-hidden="true"><use href="#holly"/></svg>
-      <svg class="corner tr" viewBox="0 0 92 92" aria-hidden="true"><use href="#holly"/></svg>
-      <svg class="corner bl" viewBox="0 0 92 92" aria-hidden="true"><use href="#holly"/></svg>
-      <svg class="corner br" viewBox="0 0 92 92" aria-hidden="true"><use href="#holly"/></svg>
+ <div class="edge">
 
-      <header>
-        <img class="logo" src="img/logo.png" width="180" height="180" alt="JC Trees logo: a pallet-wood Christmas tree with holly">
-        <h1>JC Trees</h1>
-        <div class="tagline">Transforming old to new</div>
-        <svg class="swash" viewBox="0 0 200 10" aria-hidden="true"><path d="M5 7 Q100 -1 195 5" stroke="#c8202a" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
-      </header>
+  <header>
+    <svg class="sprig l" viewBox="0 0 92 70" aria-hidden="true">
+      <path d="M6 8c14 4 26 12 38 26" stroke="#5b4a2a" stroke-width="2" fill="none"/>
+      <path d="M14 10c3 6 2 12-2 16M22 14c3 6 3 12-1 17M30 19c3 6 3 12 0 17M38 26c2 6 2 11-1 15" stroke="#2f6b35" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M12 12c6-1 11 2 14 6M20 16c6-1 11 2 14 7M28 21c6 0 10 3 13 8" stroke="#3e7d3f" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <circle cx="46" cy="38" r="4.5" fill="#b8242a"/><circle cx="53" cy="33" r="4" fill="#c4302f"/><circle cx="51" cy="42" r="3.6" fill="#a51f25"/>
+    </svg>
+    <svg class="sprig r" viewBox="0 0 92 70" aria-hidden="true">
+      <path d="M6 8c14 4 26 12 38 26" stroke="#5b4a2a" stroke-width="2" fill="none"/>
+      <path d="M14 10c3 6 2 12-2 16M22 14c3 6 3 12-1 17M30 19c3 6 3 12 0 17M38 26c2 6 2 11-1 15" stroke="#2f6b35" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M12 12c6-1 11 2 14 6M20 16c6-1 11 2 14 7M28 21c6 0 10 3 13 8" stroke="#3e7d3f" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <circle cx="46" cy="38" r="4.5" fill="#b8242a"/><circle cx="53" cy="33" r="4" fill="#c4302f"/>
+    </svg>
+    <span class="star s1" aria-hidden="true">★</span>
+    <span class="star s2" aria-hidden="true">★</span>
+    <span class="star s3" aria-hidden="true">★</span>
+    <span class="star s4" aria-hidden="true">★</span>
 
-      <div class="ribbon">
-        <svg viewBox="0 0 420 60" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M0 18 L40 18 L40 52 L0 52 L14 35 Z" fill="#9c1820"/>
-          <path d="M420 18 L380 18 L380 52 L420 52 L406 35 Z" fill="#9c1820"/>
-          <path d="M28 6 Q210 -6 392 6 L392 46 Q210 34 28 46 Z" fill="#c8202a" stroke="#d9a52b" stroke-width="2"/>
-          <path d="M34 11 Q210 0 386 11" stroke="#e8c45a" stroke-width="1" fill="none"/>
-          <path d="M34 41 Q210 30 386 41" stroke="#e8c45a" stroke-width="1" fill="none"/>
-        </svg>
-        <span>Upcycled &amp; handmade</span>
-      </div>
+    <h1>JC Trees</h1>
+    <svg class="underline" viewBox="0 0 320 16" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M4 11c60-7 150-9 230-6 30 1 55 3 82 6" stroke="#22592c" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </svg>
+    <div class="banner">Christmas Market</div>
+    <p class="motto">Transforming<br>old to new</p>
+  </header>
 
-      <div class="product">
-        <div class="treebox">
-          <div class="price"><b>£20</b><i>each</i></div>
-          <svg class="tree" viewBox="0 0 250 368" role="img" aria-label="Pallet-wood Christmas tree, 82.5cm tall and 41cm wide">
-            <defs>
-              <pattern id="grain" width="60" height="8" patternUnits="userSpaceOnUse">
-                <path d="M0 2 Q15 0 30 2 T60 2 M0 6 Q20 4 40 6 T60 6" stroke="#7a5532" stroke-opacity=".35" stroke-width=".8" fill="none"/>
-              </pattern>
-            </defs>
-            <rect x="99" y="18" width="22" height="290" fill="#a77a4e"/>
-            <rect x="99" y="18" width="22" height="290" fill="url(#grain)"/>
-            <rect x="35" y="304" width="150" height="16" rx="1.5" fill="#9b6f45"/>
-            <rect x="35" y="304" width="150" height="16" fill="url(#grain)"/>
-            <g id="slats"></g>
-            <g stroke="#153f1d" stroke-width="1.6" fill="#153f1d">
-              <line x1="222" y1="22" x2="222" y2="316"/>
-              <line x1="214" y1="18" x2="230" y2="18"/>
-              <line x1="214" y1="320" x2="230" y2="320"/>
-              <path d="M222 18 l-4 9 h8 z M222 320 l-4 -9 h8 z" stroke="none"/>
-              <line x1="39" y1="340" x2="181" y2="340"/>
-              <line x1="35" y1="332" x2="35" y2="348"/>
-              <line x1="185" y1="332" x2="185" y2="348"/>
-              <path d="M35 340 l9 -4 v8 z M185 340 l-9 -4 v8 z" stroke="none"/>
-            </g>
-            <rect x="207" y="150" width="30" height="40" fill="#fbf3df"/>
-            <text x="222" y="170" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 222 170)" font-family="Nunito, sans-serif" font-weight="900" font-size="17" fill="#153f1d">82.5cm</text>
-            <text x="110" y="364" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="900" font-size="17" fill="#153f1d">41cm</text>
-          </svg>
-        </div>
-        <div class="copy">
-          <h2>Handmade wooden Christmas trees</h2>
-          <p>Every JC Trees tree is built by hand from old pallets that would otherwise be thrown away, so no two are quite the same. Dress it with lights and baubles, or leave it rustic.</p>
-          <ul class="facts">
-            <li>82.5cm tall</li>
-            <li>Six wooden slat branches</li>
-            <li>41cm wide, on steady cross feet</li>
-            <li>Upcycled from reclaimed pallets</li>
-            <li>£20 each</li>
-          </ul>
-        </div>
-      </div>
-
-      <section class="block" id="prices">
-        <h2 class="prices-title">What We Sell</h2>
-        <p class="prices-sub">Everything is handmade, so no two are quite the same.</p>
-        <div class="prices">
-          <div class="card">
-            <div class="photo"><img src="img/trees.jpg" alt="Two JC Trees pallet-wood Christmas trees standing on cross-shaped feet" loading="lazy"></div>
-            <div class="label"><h3>Pallet tree</h3><span class="size">82.5cm tall, 41cm wide</span><span class="cost">£20</span></div>
-          </div>
-          <div class="card">
-            <div class="photo"><img src="img/tealights.jpg" alt="A group of birch log tealight holders in different sizes" loading="lazy"></div>
-            <div class="label"><h3>Tealight holder</h3><span class="size">Various sizes, 4cm to 10cm</span><span class="cost">Ask us</span></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="block" id="market">
-        <div class="market">
-          <h2>Come and find us</h2>
-          <div class="when">Christmas Market, Saturday 28th November
-            <small>12 noon till 4pm</small>
-          </div>
-          <div class="venue" id="venue">Venue details on our Instagram</div>
-        </div>
-      </section>
-
-      <section class="block">
-        <h2>Want a tree?</h2>
-        <ol class="steps">
-          <li><span>Send us a message on Instagram, or email <a href="mailto:jackharpley1@gmail.com" style="overflow-wrap:anywhere">jackharpley1@gmail.com</a>, saying how many you'd like.</span></li>
-          <li>We'll reply to sort out payment and how you get your tree.</li>
-        </ol>
-      </section>
-
-      <section class="block">
-        <h2>Follow JC Trees</h2>
-        <p>New trees, market dates and photos from the workshop.</p>
-        <a class="btn" href="https://www.instagram.com/jc_trees/" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          Message us on Instagram
-        </a>
-        <span class="handle">@jc_trees</span>
-        <a class="btn alt" href="mailto:jackharpley1@gmail.com?subject=JC%20Trees%20order">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-          Email us
-        </a>
-        <span class="handle">jackharpley1@gmail.com</span>
-      </section>
-
-      <footer>
-        Thank you for supporting a young local maker!
-        <small>JC Trees is run by Jack, aged 17.</small>
-      </footer>
-    </div>
+  <div class="intro">
+    <p>Every JC Trees tree is built by hand from old pallets that would otherwise be thrown away, so no two are quite the same. Dress it with lights and baubles, or leave it rustic.</p>
   </div>
+
+  <section id="prices">
+    <h2>What we sell</h2>
+    <div class="items">
+      <div class="item">
+        <figure class="snap"><img src="img/trees.jpg" width="900" height="1200" alt="Pallet-wood Christmas trees" loading="lazy"></figure>
+        <h3>Pallet Christmas tree</h3>
+        <ul>
+          <li>82.5cm tall, 41cm wide</li>
+          <li>Stands on steady cross feet</li>
+          <li>Upcycled from reclaimed pallets</li>
+        </ul>
+        <div class="price">£20</div>
+      </div>
+      <div class="item">
+        <figure class="snap"><img src="img/tealights.jpg" width="1200" height="900" alt="Birch log tealight holders in different sizes" loading="lazy"></figure>
+        <h3>Birch tealight holder</h3>
+        <ul>
+          <li>Cut from birch logs</li>
+          <li>Different sizes, from 4cm to 10cm</li>
+        </ul>
+        <div class="price">Ask us</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="market" id="market">
+    <h2>Come and find us</h2>
+    <p class="when">Christmas Market, Saturday 28th November</p>
+    <p class="time">12 noon till 4pm</p>
+    <p class="venue" id="venue">Venue details on our Instagram</p>
+  </section>
+
+  <section id="order">
+    <h2>Want one?</h2>
+    <div class="order">
+      <p>Send a message on Instagram, or email <a href="mailto:jackharpley1@gmail.com?subject=JC%20Trees%20order" style="overflow-wrap:anywhere">jackharpley1@gmail.com</a>, saying what you'd like and how many.</p>
+      <p>We'll reply to sort out payment and how you get it.</p>
+    </div>
+    <div class="links">
+      <a href="https://www.instagram.com/jc_trees/" rel="noopener">Instagram @jc_trees</a>
+      <a href="mailto:jackharpley1@gmail.com?subject=JC%20Trees%20order">Email us</a>
+    </div>
+  </section>
+
+  <footer>
+    <p class="thanks">Thank you for supporting a young local maker!</p>
+    <p class="by">JC Trees is run by Jack, aged 17.</p>
+  </footer>
+
+ </div>
 </div>
-
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <g id="holly">
-      <g stroke="#6b4a2a" stroke-width="1.4"><line x1="6" y1="10" x2="80" y2="20"/><line x1="10" y1="6" x2="34" y2="78"/></g>
-      <path d="M0,0 Q8,-2 10,-8 Q14,-5 20,-11 Q23,-6 30,-12 Q33,-6 40,-10 Q42,-4 50,0 Q42,4 40,10 Q33,6 30,12 Q23,6 20,11 Q14,5 10,8 Q8,2 0,0 Z" transform="translate(10 14) rotate(18) scale(1)" fill="#2b7a34" stroke="#174a1e" stroke-width="1.2"/>
-      <path d="M0,0 Q8,-2 10,-8 Q14,-5 20,-11 Q23,-6 30,-12 Q33,-6 40,-10 Q42,-4 50,0 Q42,4 40,10 Q33,6 30,12 Q23,6 20,11 Q14,5 10,8 Q8,2 0,0 Z" transform="translate(14 10) rotate(66) scale(.95)" fill="#2b7a34" stroke="#174a1e" stroke-width="1.2"/>
-      <path d="M12 16 L52 30 M16 12 L30 50" stroke="#9fcf7a" stroke-width="1" fill="none"/>
-      <circle cx="16" cy="16" r="5" fill="#c8202a" stroke="#7d0f15" stroke-width=".8"/>
-      <circle cx="25" cy="18" r="5" fill="#c8202a" stroke="#7d0f15" stroke-width=".8"/>
-      <circle cx="19" cy="25" r="5" fill="#c8202a" stroke="#7d0f15" stroke-width=".8"/>
-      <circle cx="14.5" cy="14.5" r="1.4" fill="#fff" fill-opacity=".8"/>
-      <circle cx="23.5" cy="16.5" r="1.4" fill="#fff" fill-opacity=".8"/>
-      <circle cx="17.5" cy="23.5" r="1.4" fill="#fff" fill-opacity=".8"/>
-    </g>
-  </defs>
-</svg>
-
-<script>
-(function () {
-  var NS = "http://www.w3.org/2000/svg";
-  var slats = document.getElementById("slats");
-  var woods = ["#c4935f", "#b5865a", "#cfa070", "#a97b4f", "#c08d5c", "#b88a5e"];
-  function el(tag, a) { var n = document.createElementNS(NS, tag); for (var k in a) n.setAttribute(k, a[k]); slats.appendChild(n); }
-  for (var i = 0; i < 6; i++) {
-    var w = 52 + i * 22, h = 30, y = 42 + i * 44, x = 110 - w / 2;
-    el("rect", { x: x, y: y, width: w, height: h, rx: 1.5, fill: woods[i] });
-    el("rect", { x: x, y: y, width: w, height: h, fill: "url(#grain)" });
-    el("line", { x1: x, y1: y + h - .5, x2: x + w, y2: y + h - .5, stroke: "#6f4b2b", "stroke-opacity": .45, "stroke-width": 1.2 });
-    el("circle", { cx: 110, cy: y + 9, r: 1.6, fill: "#4a4a4a" });
-    el("circle", { cx: 110, cy: y + h - 9, r: 1.6, fill: "#4a4a4a" });
-  }
-
-  // Set the market venue here when known, e.g. "St Mary's Church Hall"
-  var VENUE = "";
-  if (VENUE) document.getElementById("venue").textContent = "Find us at: " + VENUE;
-
-  // Hide the market box automatically once the day has passed
-  if (new Date() > new Date("2026-11-28T17:00:00Z")) {
-    document.getElementById("market").style.display = "none";
-  }
-})();
-</script>
 </body>
 </html>
