@@ -47,7 +47,7 @@ a:hover { color: var(--green-dark); }
 img { max-width: 100%; display: block; }
 
 .page {
-  max-width: 720px;
+  max-width: 860px;
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -99,6 +99,7 @@ h1 {
   background: rgba(236,223,192,.85); transform: translateX(-50%) rotate(-3deg);
   box-shadow: 0 1px 1px rgba(0,0,0,.06);
 }
+.snap { margin: 0; }
 .snap img { width: 100%; height: auto; }
 .item .snap img { aspect-ratio: 4 / 5; object-fit: cover; height: auto; }
 .snap figcaption { font-family: var(--brush); color: var(--green-dark); font-size: 1.35rem; text-align: center; margin-top: 6px; line-height: 1.2; }
@@ -115,9 +116,11 @@ h2 {
 .intro p { margin: 0 0 12px; }
 
 .items { display: grid; gap: 40px; margin-top: 26px; }
-@media (min-width: 640px) { .items { grid-template-columns: 1fr 1fr; gap: 32px; } }
+@media (min-width: 520px) { .items { grid-template-columns: 1fr 1fr; gap: 28px; } }
+@media (min-width: 760px) { .items { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
 .item:nth-child(1) .snap { transform: rotate(-1.4deg); }
 .item:nth-child(2) .snap { transform: rotate(1.1deg); }
+.item:nth-child(3) .snap { transform: rotate(-0.6deg); }
 .item h3 { font-family: var(--brush); font-weight: 400; color: var(--green-dark); font-size: 1.9rem; margin: 18px 0 2px; line-height: 1.1; }
 .item p { margin: 0; }
 .item .price { font-family: var(--brush); color: var(--red); font-size: 2.3rem; line-height: 1.1; margin-top: 6px; }
@@ -206,6 +209,14 @@ footer .by { color: var(--muted); font-size: .92rem; margin: 4px 0 0; }
         <ul>
           <li>Cut from birch logs</li>
           <li>Different sizes, from 4cm to 10cm</li>
+        </ul>
+        <div class="price">Ask us</div>
+      </div>
+      <div class="item">
+        <figure class="snap"><img src="img/decorated.jpg" width="826" height="1200" alt="A JC Trees pallet tree painted black and decorated with tinsel, fairy lights and ornaments" loading="lazy"></figure>
+        <h3>Decorated tree</h3>
+        <ul>
+          <li>Painted, with tinsel, lights and decorations</li>
         </ul>
         <div class="price">Ask us</div>
       </div>
